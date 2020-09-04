@@ -36,7 +36,7 @@ class User(AbstractUser):
 
     )
 
-    avatar = models.ImageField(blank=True, null=True)
+    avatar = models.ImageField(upload_to="avatars", blank=True, null=True)
     gender = models.CharField(choices=GENDER_CHOICES,
                               max_length=10, blank=True)
     bio = models.TextField(default="", blank=True)
